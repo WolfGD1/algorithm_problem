@@ -1,11 +1,11 @@
 #include <iostream>
+
 int arr[130][130], white, blue;
 int ColorCheck(int len, int x, int y)
 {
 	for (int i = x; i < x + len; i++) {
 		for (int j = y; j < y + len; j++)
-			if (arr[i][j] != arr[x][y])
-				return 0;
+			if (arr[i][j] != arr[x][y]) return 0;
 	}
 	return 1;
 }
@@ -34,4 +34,4 @@ int main()
 	for (i = 0; i < n; i++) { for (j = 0; j < n; j++) cin >> arr[i][j]; }
 	Cut(1, 1, n, n);
 	cout << white << '\n' << blue;
-}
+} //c++
